@@ -317,7 +317,7 @@ TIR_TOOLS = [
                     "node_id": {"type": "string", "description": "对应教材小节编号（如 '8.3'、'10.2'，若属八年级拓展如勾股定理可填 'ext'）"},
                     "volume": {"type": "string", "description": "所属册次或分类，如 '七年级上册'、'七年级下册'、'初中拓展专题'"},
                     "tags": {"type": "string", "description": "标签，用逗号分隔，如 '直角三角形,三边关系,面积割补'"},
-                    "summary": {"type": "string", "description": "核心概念与公式总结（初一学生能听懂的语言）"},
+                    "summary": {"type": "string", "description": "核心概念与公式总结（学生能听懂的语言）"},
                     "mindmap": {
                         "type": "array",
                         "items": {"type": "string"},
@@ -331,7 +331,7 @@ TIR_TOOLS = [
     },
 ]
 
-VISION_PROMPT = """你是初一数学读题员。只输出 JSON，不要计算，不要填空，不要改数字。
+VISION_PROMPT = """你是数学读题员。只输出 JSON，不要计算，不要填空，不要改数字。
 一张上有多道题就逐道抄进 items。像「(1)(2)(3)(4)」这种小题各算一道，总标题「比较下列各组数的大小」不要单独成题。填空保留 ____。分数写成 1/4 这种形式，不要用公式。看不清的字写成「看不清」，不要换成别的题。
 {
   "items": [
@@ -344,7 +344,7 @@ figure 没有就 null，有就只能是这两种：
 {"type":"number_line","min":-5,"max":5,"points":[{"label":"A","value":-3.5}]}
 {"type":"angle","degrees":60,"label":"60°"}"""
 
-EXPR_PROMPT = """把下面这道初一数学题改写成一个可计算的算式。只输出 JSON。
+EXPR_PROMPT = """把下面这道数学题改写成一个可计算的算式。只输出 JSON。
 不要自己算出结果。算式使用 + - * / ^ 和括号，绝对值用竖线。
 如果题里没有可以计算的算式，expression 用空字符串。
 {"expression": ""}
