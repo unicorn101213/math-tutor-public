@@ -1,0 +1,10 @@
+.venv/
+backend/.env
+backend/data/
+**/__pycache__/
+**/.pytest_cache/
+app/.dart_tool/
+app/build/
+app/**/ephemeral/
+*.apk
+教材/

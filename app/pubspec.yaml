@@ -1,0 +1,26 @@
+name: math_tutor
+description: 初一数学家教
+publish_to: "none"
+version: 1.0.10+11
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: 1.6.0
+  image: 4.5.4
+  image_picker: 1.1.2
+  image_picker_android: 0.8.12+21
+  image_picker_platform_interface: 2.10.1
+  shared_preferences: 2.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon.png

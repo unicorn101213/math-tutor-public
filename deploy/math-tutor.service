@@ -1,0 +1,17 @@
+[Unit]
+Description=Math tutor backend
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/math-tutor/backend
+Environment=PATH=/opt/math-tutor/venv/bin
+ExecStart=/opt/math-tutor/venv/bin/uvicorn main:app --host 127.0.0.1 --port 8300
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
